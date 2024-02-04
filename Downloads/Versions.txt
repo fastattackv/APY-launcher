@@ -1,2 +1,2 @@
-launcher=1.2.3
+launcher=2.0.0
 APY! Sudoku=1.2.0
