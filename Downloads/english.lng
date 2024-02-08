@@ -1,0 +1,102 @@
+WINDOW:
+APY! launcher
+Home
+Apps
+New game
+Updates
+Options
+HOME:
+Welcome in the APY! launcher
+Updates:
+Searching for updates
+The launcher is up to date
+The launcher needs to be updated
+All the installed APY! games are up to date
+Updates are available for:
+Launch the last game:
+Not any last game
+APPS:
+Applications
+No filter activated
+Favorites
+Games
+Bonuses
+Folder
+Search
+Launch
+Cannot launch: app path does not exist
+Set to favorite
+has been set to favorite
+Remove from favorites
+has been removed from favorites
+Rename
+Enter the new name for the application
+The entered name is already in use, please enter another one
+renamed in
+Delete
+Do you really want to delete the following application from the launcher:
+ADD:
+New game
+Validate
+Application type
+Game
+Bonus
+Application path
+Select path
+Cannot add game: the given path does not exists
+Application name
+Please chose another name, the given name already exists
+The icon couldn't be retrieved, adding game without icon
+The given path is not a file
+Application saved
+The name length is too big (max 30 characters)
+UPDATES:
+Updates
+Refresh
+Update cannot be done:
+connexion error: check your connexion
+Launcher:
+The launcher is up to date
+Update available for the launcher
+APY! games:
+All the APY! games are up to date
+Update
+Update all
+Updating:
+Cancel
+Cancel all
+Following updates:
+The launcher has to be updated before the games
+The update failed, please try again later
+Refreshing...
+Refreshed available updates
+OPTIONS:
+Options
+Save
+Default parameters
+Do you really want to apply default parameters ?
+Parameters saved
+Language
+Theme (Dark/Light)
+Window size
+Incorrect window size
+Window size is too small
+Default filter
+Stop launcher when launching game
+DIALOGS:
+Entering value
+Please enter a value
+Please enter an integer
+Please enter a decimal number
+Cannot cancel, please enter a value
+Creating directory
+Enter the name of the directory to create
+The directory will be created in:
+The given name already exists, please enter another one
+Ok
+Cancel
+Entering path
+Please select a path
+Cannot cancel, please select a path
+Yes
+No
