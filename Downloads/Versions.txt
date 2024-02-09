@@ -1,3 +1,4 @@
 launcher=2.0.0
 minversioninstaller=1.0.0
+minversionupdater=1.0.0
 APY! Sudoku=1.2.0
