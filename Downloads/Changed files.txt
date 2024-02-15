@@ -1,1 +1,2 @@
 2.0.0=cache,icons,launcher data,lng files,apps.csv,APY! Launcher.exe,APY! Launcher Uninstaller.exe,APY Launcher Updater.exe,APY! Launcher.exe,params.APYL
+2.1.0=APY! Launcher.exe
