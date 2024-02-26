@@ -11,8 +11,6 @@ Mises à jour :
 Recherche de mises à jour
 Le lanceur est à jour
 Le lanceur doit être mis à jour
-Tous les jeux APY! installés sont à jour
-Des mises à jour sont disponibles pour :
 Lancer le dernier jeu lancé :
 Pas de dernier jeu
 APPS:
@@ -53,29 +51,28 @@ La longueur du nom est trop grande (max 30 caractères)
 UPDATES:
 Mises à jour
 Rafraichir
+Rafraichissement...
+Mises à jour disponibles rafraichies
+Mettre à jour
 Mise à jour impossible :
 Erreur de connexion : vérifiez votre connexion
 Lanceur :
 Le lanceur est à jour
 Mise à jour du lanceur disponible
-Jeux APY! :
-Tous les jeux APY! sont à jour
-Mettre à jour
-Tout mettre à jour
-Mise à jour :
-Annuler
-Annuler tout
-Mises à jour à suivre :
-Le lanceur doit être mis à jour avant les jeux
-La mise à jour a échoué, veuillez réessayer plus tard
-Rafraichissement...
-Mises à jour disponibles rafraichies
+Êtes-vous sûr de vouloir mettre à jour le lanceur ?
+Le programme de mise à jour est introuvable, annulation de la mise à jour
 OPTIONS:
 Options
 Appliquer
 Paramètres par défaut
 Voulez-vous vraiment appliquer les paramètres par défaut ?
 Paramètres sauvegardés
+À propos
+Version du lanceur :
+Créé et développé par fastattack
+Fichier de langue créé par fastattack
+Icônes par flaticon (voir GitHub)
+Lien du dossier GitHub : https://github.com/fastattackv/APY-launcher
 Langue
 Thème (Sombre/Clair)
 Taille de la fenêtre

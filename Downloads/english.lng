@@ -1,5 +1,5 @@
 WINDOW:
-APY! launcher
+APY! Launcher
 Home
 Apps
 New game
@@ -11,8 +11,6 @@ Updates:
 Searching for updates
 The launcher is up to date
 The launcher needs to be updated
-All the installed APY! games are up to date
-Updates are available for:
 Launch the last game:
 Not any last game
 APPS:
@@ -53,29 +51,28 @@ The name length is too big (max 30 characters)
 UPDATES:
 Updates
 Refresh
-Update cannot be done:
-connexion error: check your connexion
-Launcher:
-The launcher is up to date
-Update available for the launcher
-APY! games:
-All the APY! games are up to date
-Update
-Update all
-Updating:
-Cancel
-Cancel all
-Following updates:
-The launcher has to be updated before the games
-The update failed, please try again later
 Refreshing...
-Refreshed available updates
+Available updates refreshed
+Update
+Cannot update :
+Connexion error: check your internet connexion
+Launcher :
+The launcher is up-to-date
+Update available for the launcher
+Are you sure you want to update the launcher ?
+Update application cannot be found, cancelling update
 OPTIONS:
 Options
 Save
 Default parameters
 Do you really want to apply default parameters ?
 Parameters saved
+About the launcher
+Launcher version:
+Created and developed by fastattack
+Language file created by fastattack
+Icons by flaticon (see on github)
+GitHub repository link: https://github.com/fastattackv/APY-launcher
 Language
 Theme (Dark/Light)
 Window size
