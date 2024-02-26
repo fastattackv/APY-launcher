@@ -60,7 +60,7 @@ Launcher :
 The launcher is up-to-date
 Update available for the launcher
 Are you sure you want to update the launcher ?
-Update application cannot be found, cancelling update
+Updater cannot be found, cancelling update
 OPTIONS:
 Options
 Save
@@ -80,6 +80,9 @@ Incorrect window size
 Window size is too small
 Default filter
 Stop launcher when launching game
+Uninstall
+Are you sure you want to start the launcher uninstaller ?
+Uninstaller not found: uninstallation impossible
 DIALOGS:
 Entering value
 Please enter a value
