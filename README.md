@@ -14,8 +14,8 @@ The launcher will also be the platform to download, update and play the availabl
 
 ## How to install the launcher ?
 
-[!NOTE]
-The launcher is only available on windows
+> [!NOTE]
+> The launcher is only available on windows
 
 1. Download the "APY! Launcher Installer.exe" file
 2. Launch the downloaded file

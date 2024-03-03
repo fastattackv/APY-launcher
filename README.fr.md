@@ -14,8 +14,8 @@ Le lanceur sera aussi la plateforme pour télécharger, mettre à jour et jouer 
 
 ## Comment l'installer ?
 
-[!NOTE]
-L'application est disponible uniquement sur windows
+> [!NOTE]
+> L'application est disponible uniquement sur windows
 
 1. Télécharger le fichier "APY! Launcher Installer.exe"
 2. Lancer le fichier téléchargé
