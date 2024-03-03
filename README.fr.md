@@ -19,6 +19,8 @@ Le lanceur sera aussi la plateforme pour télécharger, mettre à jour et jouer 
 
 1. Télécharger le fichier "APY! Launcher Installer.exe"
 2. Lancer le fichier téléchargé
+2b. Windows will probably tell you "Windows protected your pc", because the application doesn't have an e-signature, to install, click on "more info" and then click on "run anyway"
+2b. Windows vous dira probablement "Windows a protégé votre ordinateur" car l'application ne possède pas de signature numérique, pour installer, cliquez sur "informations complémentaires" puis sur "Exécuter quand même"
 3. Suivre les instructions données par l'application (choisir le chemin d'installation, les langues à installer...)
 4. Le lanceur est prêt !
 5. Si vous rencontrez des bugs ou comportements innatendus durant votre utilisation du lanceur, merci de les signaler dans l'onglet "Issues" de la page GitHub
