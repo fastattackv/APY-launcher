@@ -1,5 +1,5 @@
 # APY! Launcher
-[Français](README.fr.md)
+[![fr](https://img.shields.io/badge/lang-fr-green)](README.fr.md)
 
 This application is made to organise your installed games and apps and have them in only one place.
 
@@ -17,7 +17,7 @@ The launcher will also be the platform to download, update and play the availabl
 > [!NOTE]
 > The launcher is only available on windows
 
-1. Download the "APY! Launcher Installer.exe" file
+1. Download the "APY! Launcher Installer.exe" file: [click here to download the file](https://github.com/fastattackv/APY-launcher/raw/main/APY!%20Launcher%20Installer.exe)
 2. Launch the downloaded file, Windows will probably tell you "Windows protected your pc", because the application doesn't have an e-signature, to install, click on "more info" and then click on "run anyway"
 3. Follow the instructions given by the application, (choose the installation path, choose which languages to install...)
 4. The launcher is ready to be used !

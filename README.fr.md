@@ -1,5 +1,5 @@
 # Lanceur APY!
-[English](README.md)
+[![en](https://img.shields.io/badge/lang-en-red)](README.md)
 
 Cette application est faite pour organiser vos jeux et applications installés et les avoir à un seul endroit.
 
@@ -17,7 +17,7 @@ Le lanceur sera aussi la plateforme pour télécharger, mettre à jour et jouer 
 > [!NOTE]
 > L'application est disponible uniquement sur windows
 
-1. Télécharger le fichier "APY! Launcher Installer.exe"
+1. Télécharger le fichier "APY! Launcher Installer.exe" : [cliquez ici pour télécharger le fichier](https://github.com/fastattackv/APY-launcher/raw/main/APY!%20Launcher%20Installer.exe)
 2. Lancer le fichier téléchargé, Windows vous dira probablement "Windows a protégé votre ordinateur" car l'application ne possède pas de signature numérique, pour installer, cliquez sur "informations complémentaires" puis sur "Exécuter quand même"
 3. Suivre les instructions données par l'application (choisir le chemin d'installation, les langues à installer...)
 4. Le lanceur est prêt !
