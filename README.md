@@ -21,7 +21,7 @@ The launcher will also be the platform to download, update and play the availabl
 2. Launch the downloaded file, Windows will probably tell you "Windows protected your pc", because the application doesn't have an e-signature, to install, click on "more info" and then click on "run anyway"
 3. Follow the instructions given by the application, (choose the installation path, choose which languages to install...)
 4. The launcher is ready to be used !
-5. If you encounter a bug or an unexpected behavior, please signal it in the "Issues" tab of the GitHub repository
+5. If you encounter a bug or an unexpected behavior, please signal it in the [discord server](https://discord.gg/pHPkkpXhUV) or in the "Issues" tab of the GitHub repository.
 
 ## Mentions
 The launcher was created and is maintained by fastattack
