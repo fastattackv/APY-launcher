@@ -1,0 +1,103 @@
+WINDOW:
+Lanceur APY!
+Accueil
+Apps
+Nouveau
+Mises à jour
+Options
+HOME:
+Bienvenue dans le lanceur APY!
+Mises à jour :
+Recherche de mises à jour
+Le lanceur est à jour
+Le lanceur doit être mis à jour
+Lancer le dernier jeu lancé :
+Pas de dernier jeu
+APPS:
+Applications
+Pas de filtre
+Favoris
+Jeux
+Bonus
+Dossiers
+Rechercher
+Lancer
+Lancement impossible : le chemin de l'application n'existe pas
+Ajouter aux favoris
+a été ajouté aux favoris
+Retirer des favoris
+a été retiré des favoris
+Renommer
+Entrez le nouveau nom pour l'application
+Le nom entré est déjà utilisé, veuillez en choisir un autre
+renommé en
+Supprimer
+Voulez-vous vraiment supprimer l'application suivante du lanceur :
+ADD:
+Ajout de jeu
+Valider
+Type d'application
+Jeu
+Bonus
+Chemin de l'application
+Sélection du chemin
+Ajout impossible : le chemin spécifié n'existe pas
+Nom de l'application
+Veuillez choisir un autre nom, le nom spécifié existe déjà
+L'icône n'a pas pu être récupérée, ajout du jeu sans icône
+Le chemin choisi n'est pas un fichier
+Application enregistrée
+La longueur du nom est trop grande (max 30 caractères)
+Veuillez entrer un nom pour l'application
+UPDATES:
+Mises à jour
+Rafraichir
+Rafraichissement...
+Mises à jour disponibles rafraichies
+Mettre à jour
+Mise à jour impossible :
+Erreur de connexion : vérifiez votre connexion
+Lanceur :
+Le lanceur est à jour
+Mise à jour du lanceur disponible
+Êtes-vous sûr de vouloir mettre à jour le lanceur ?
+Le programme de mise à jour est introuvable, annulation de la mise à jour
+OPTIONS:
+Options
+Appliquer
+Paramètres par défaut
+Voulez-vous vraiment appliquer les paramètres par défaut ?
+Paramètres sauvegardés
+À propos
+Version du lanceur :
+Créé et développé par fastattack
+Fichier de langue créé par fastattack
+Icônes par flaticon (voir GitHub)
+Lien du dossier GitHub : https://github.com/fastattackv/APY-launcher
+Langue
+Thème (Sombre/Clair)
+Taille de la fenêtre
+Taille de la fenêtre incorrecte
+Taille de la fenêtre trop petite
+Filtre par défaut
+Arrêt du lanceur au lancement d'un jeu
+Désinstaller
+Êtes-vous sûr de vouloir lancer le désinstallateur du lanceur ?
+Désinstallateur introuvable : désinstallation impossible
+DIALOGS:
+Entrée de valeur
+Veuillez entrer une valeur
+Veuillez entrer un nombre entier
+Veuillez entrer un nombre décimal (Le séparateur entre les parties entière et décimale est le ".")
+Annulation impossible, veuillez entrer une valeur
+Création de dossier
+Entrez le nom du dossier à créer
+Le dossier sera créé dans :
+Le nom entré existe déjà, veuillez en entrer un autre
+Ok
+Annuler
+Entrée du chemin
+Veuillez sélectionner un chemin
+Annulation impossible, veuillez sélectionner un chemin
+Oui
+Non
