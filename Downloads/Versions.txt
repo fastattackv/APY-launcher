@@ -1,3 +1,4 @@
-launcher=2.0.0
+launcher=2.1.0
+updater=2.0.0
 minversioninstaller=1.0.0
-minversionupdater=1.1.0
+minversionupdater=2.0.0

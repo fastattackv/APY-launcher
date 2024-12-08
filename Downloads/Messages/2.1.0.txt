@@ -1,2 +1,7 @@
-This is a test message.
-Update version 2.1.0
+Version 2.1.0 of the launcher:
+News:
+- Configurations and folders to organize your games more easily
+- Game detector to add multiple games easily
+- Improved performance
+- Lots of quality of life improvements
+For more information, check the GitHub patch notes
