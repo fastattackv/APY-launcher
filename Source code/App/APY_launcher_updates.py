@@ -16,12 +16,18 @@ import zipfile
 import os
 import shutil
 import win32com.client
+import pythoncom
 
 
-def get_file_version(path):
-    """ Returns the version of the given file """
-    information_parser = win32com.client.Dispatch("Scripting.FileSystemObject")
+def get_file_version(path: str) -> str:
+    """ Returns the version string of the given file """
+    information_parser = win32com.client.Dispatch("Scripting.FileSystemObject", pythoncom.CoInitialize())
     version = information_parser.GetFileVersion(path)
+    if version.count(".") != 2:  # cutting to "x.x.x"
+        while version.count(".") < 2:
+            version += ".0"
+        while version.count(".") > 2:
+            version = ".".join(version.split(".")[0:-1])
     return version
 
 

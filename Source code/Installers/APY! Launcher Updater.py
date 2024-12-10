@@ -59,9 +59,27 @@ class APYUpdateLanguageInterpreter:
             "updatecsv": self.updatecsv
         }
 
+    @staticmethod
+    def parse_command(command: str) -> list[str]:
+        """ Parses the given command and returns the list of arguments """
+        in_quotation = False
+        parsed_command = []
+        current_argument = ""
+        for char in command:
+            if char == "\"":
+                in_quotation = not in_quotation
+            elif char == " " and not in_quotation:
+                parsed_command.append(current_argument)
+                current_argument = ""
+            else:
+                current_argument += char
+        if current_argument != "":
+            parsed_command.append(current_argument)
+        return parsed_command
+
     def execute(self, command: str) -> bool:
         """ Executes the given command, returns False if there was an error, True otherwise """
-        command = command.split(" ")
+        command = self.parse_command(command)
         if command[0] in self.commands:
             return self.commands[command[0]](command[1:])
         else:
@@ -88,16 +106,22 @@ class APYUpdateLanguageInterpreter:
             launcher_folder = os.path.abspath(os.getcwd())
             old_dir = os.path.join(launcher_folder, arguments[0])
             new_dir = os.path.join(launcher_folder, "cache/APY! Launcher", arguments[0])
-            if os.path.isdir(new_dir):  # the new dir exists
-                for file in os.listdir(new_dir):
-                    old_file = os.path.join(old_dir, file)
-                    new_file = os.path.join(new_dir, file)
-                    if os.path.isfile(new_file):  # the new file exists
-                        if os.path.isfile(old_file):  # there is a file to replace
-                            os.remove(old_file)
-                        shutil.copy2(new_file, old_file)
-                    else:
-                        return False
+
+            for file in os.listdir(old_dir):  # remove all files in old dir
+                full_path = os.path.join(old_dir, file)
+                if os.path.isfile(full_path):
+                    os.remove(full_path)
+                else:
+                    shutil.rmtree(full_path)
+
+            for file in os.listdir(new_dir):  # copy all new files
+                src = os.path.join(new_dir, file)
+                dst = os.path.join(old_dir, file)
+                if os.path.isfile(src):
+                    shutil.copy2(src, dst)
+                else:
+                    shutil.copytree(src, dst)
+
             else:
                 return False
         else:
@@ -154,11 +178,11 @@ class APYUpdateLanguageInterpreter:
 
             if arguments[1] == "newline" and len(arguments) == 3:
                 if arguments[2].isnumeric() or arguments[2] == "end":
-                    with open(path, "r") as f:
+                    with open(path, "r", encoding="utf-8") as f:
                         content = f.readlines()
                     index = int(arguments[2]) if arguments[2].isnumeric() else len(content)
                     content.insert(index, "\n")
-                    with open(path, "w") as f:
+                    with open(path, "w", encoding="utf-8") as f:
                         f.writelines(content)
                     return True
                 else:
@@ -166,7 +190,7 @@ class APYUpdateLanguageInterpreter:
 
             elif arguments[1] == "deleteline" and len(arguments) == 4:
                 if (arguments[2] == "index" and arguments[3].isnumeric()) or (arguments[2] == "start"):
-                    with open(path, "r") as f:
+                    with open(path, "r", encoding="utf-8") as f:
                         content = f.readlines()
                     if arguments[2] == "index" and arguments[3].isnumeric():
                         index = int(arguments[3])
@@ -178,27 +202,33 @@ class APYUpdateLanguageInterpreter:
                         else:
                             return False
                     content.pop(index)
-                    with open(path, "w") as f:
+                    with open(path, "w", encoding="utf-8") as f:
                         f.writelines(content)
                     return True
                 else:
                     return False
 
             elif arguments[1] == "rewriteline" and len(arguments) == 5:
-                if (arguments[2] == "index" and arguments[3].isnumeric()) or arguments[2] == "start":
-                    with open(path, "r") as f:
+                if (arguments[2] == "index" and arguments[3].isnumeric() or arguments[2] == "index" and arguments[3] == "end") or arguments[2] == "start":
+                    with open(path, "r", encoding="utf-8") as f:
                         content = f.readlines()
+                        print(content)
                     if arguments[2] == "index" and arguments[3].isnumeric():
                         index = int(arguments[3])
-                    else:
+                    elif arguments[2] == "index" and arguments[3] == "end":
+                        index = len(content) - 1
+                    else:  # start
                         for x in range(len(content)):
                             if content[x].startswith(arguments[3]):
                                 index = x
                                 break
                         else:
                             return False
-                    content[index] = arguments[4]
-                    with open(path, "w") as f:
+                    if arguments[3] == "end" and content[index] != "\n" and content[index].endswith("\n"):
+                        content.append(arguments[4])
+                    else:
+                        content[index] = arguments[4] + "\n"
+                    with open(path, "w", encoding="utf-8") as f:
                         f.writelines(content)
                     return True
                 else:
@@ -206,7 +236,7 @@ class APYUpdateLanguageInterpreter:
 
             elif arguments[1] == "modifyline" and len(arguments) == 7:
                 if ((arguments[2] == "index" and arguments[3].isnumeric()) or arguments[2] == "start") and arguments[5].isnumeric():
-                    with open(path, "r") as f:
+                    with open(path, "r", encoding="utf-8") as f:
                         content = f.readlines()
                     splitter_char = arguments[4]
                     if arguments[2] == "index" and arguments[3].isnumeric():
@@ -224,7 +254,7 @@ class APYUpdateLanguageInterpreter:
                     line = splitter_char.join(line)
                     line += "\n"
                     content[index] = line
-                    with open(path, "w") as f:
+                    with open(path, "w", encoding="utf-8") as f:
                         f.writelines(content)
                     return True
                 else:
@@ -300,6 +330,7 @@ class Step1:
 
     def show(self):
         hide_all()
+        self.version_label.configure(text=f"Updater version: {_version}\nCurrent launcher version: {launcher_version}\nLatest launcher version: {versions["launcher"]}\nUpdating from the {"development" if branch == "Development" else "stable"} branch")  # refresh the label
         self.title_label.grid(row=0, column=0, columnspan=2, padx=5, pady=5)
         self.version_label.grid(row=1, column=0, columnspan=2, padx=5, pady=5)
         self.start_button.grid(row=2, column=0, columnspan=2, padx=5, pady=100)
@@ -340,7 +371,7 @@ class Step2:
     @staticmethod
     def start_launcher(path: str, arguments: list):
         """ Starts the launcher at the given path and stops the installer """
-        subprocess.run([path] + arguments)
+        subprocess.Popen([path] + arguments)
         win.destroy()
 
     def reload(self, *args):
@@ -365,7 +396,7 @@ class Step2:
             self.progress_bar.set(1)
             self.current_process_label.configure(text="Done")
             self.title_label.configure(text="Update is done")
-            ctk.CTkButton(win, text="Start the launcher", command=lambda a=os.path.join(path, "APY! Launcher.exe"): self.start_launcher(a, [f"updatedfrom={github_version}"])).grid(row=3, column=0, pady=10, padx=10)
+            ctk.CTkButton(win, text="Start the launcher", command=lambda a=os.path.join(path, "APY! Launcher.exe"): self.start_launcher(a, [f"updatedfrom={launcher_version}"])).grid(row=3, column=0, pady=10, padx=10)
             ctk.CTkButton(win, text="Exit", command=win.destroy).grid(row=3, column=1, pady=10, padx=10)
         elif var == 6:  # connexion error
             self.current_process_label.configure(text="Check your connexion or try again later")
@@ -442,7 +473,7 @@ class Step2:
                 versions_to_update = [version for version in versions_list if initial_version < version <= current_version]
                 commands = []
                 for version in versions_to_update:
-                    response = requests.get(f"https://github.com/fastattackv/APY-launcher/raw/{branch}/Downloads/AUL%20commands/{version}.txt", timeout=(5, 10))
+                    response = requests.get(f"https://github.com/fastattackv/APY-launcher/raw/{branch}/Downloads/AUL%20commands/{version}.AUL", timeout=(5, 10))
                     if response.status_code == 200:
                         commands.extend(response.text.split("\n"))
                     else:
@@ -475,7 +506,7 @@ class Step2:
         installing = True
 
         self.reload_variable.set(1)  # download
-        languages_to_download = [file for file in os.listdir("lng files") if os.path.isfile(file) and file.endswith(".lng")]
+        languages_to_download = [file for file in os.listdir("lng files") if os.path.isfile(os.path.join("lng files", file)) and file.endswith(".lng")]
         threading.Thread(target=self._download_launcher_files, name="updater: downloading launcher files").start()
         threading.Thread(target=self._download_language_files, args=[languages_to_download], name="updater: downloading language files").start()
         threading.Thread(target=self._get_update_commands_list, args=[launcher_version, versions["launcher"]], name="updater: downloading AUL commands").start()
@@ -502,19 +533,18 @@ class Step2:
                 self.reload_variable.set(7)
                 installing = False
             # replace old language files
-            for file in os.listdir("cache"):
-                if os.path.isfile(file):
-                    if file.endswith(".lng"):
-                        if os.path.exists(f"lng files/{file}"):  # remove previous lng file
-                            os.remove(f"lng files/{file}")
-                        shutil.copy2(f"cache/{file}", f"lng files/{file}")
+            for file in languages_to_download:
+                if os.path.isfile(os.path.join("cache", file)):
+                    if os.path.isfile(f"lng files/{file}"):  # remove previous lng file
+                        os.remove(f"lng files/{file}")
+                    shutil.copy2(f"cache/{file}", f"lng files/{file}")
 
             self.reload_variable.set(4)  # deleting cache files
             for filename in os.listdir("cache"):
                 file_path = os.path.join("cache", filename)
                 try:
                     if os.path.isfile(file_path) or os.path.islink(file_path):
-                        os.unlink(file_path)
+                        os.remove(file_path)
                     elif os.path.isdir(file_path):
                         shutil.rmtree(file_path)
                 except:

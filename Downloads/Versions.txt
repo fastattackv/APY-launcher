@@ -1,4 +1,4 @@
 launcher=2.1.0
 updater=2.0.0
-minversioninstaller=1.0.0
+minversioninstaller=1.0.1
 minversionupdater=2.0.0
