@@ -1,0 +1,167 @@
+WINDOW:
+APY! Launcher
+Home
+Apps
+New game
+Updates
+Options
+HOME:
+Welcome in the APY! launcher
+Updates
+Searching for updates...
+The launcher is up to date
+A newer version of the launcher is available
+Launch the last game
+Not any last game
+Messages
+Don't show these messages again
+Patch notes
+APPS:
+Applications
+No filter activated
+Favorites
+Games
+Bonuses
+Folder
+Search
+Launch
+Cannot launch: app path does not exist
+Set to favorite
+has been set to favorite
+Remove from favorites
+has been removed from favorites
+Rename
+Enter the new name for the application
+The entered name is already in use, please enter another one
+renamed in
+Delete
+Do you really want to delete the following application from the launcher ?
+Random
+The randomly selected game is
+Do you want to start this game ?
+Move
+Applications in the configuration
+Configurations
+Hidden apps
+Set to hidden
+Set to not hidden
+An application cannot be favorite and hidden at the same time,
+Do you still want to execute this change ?
+has been set to hidden
+has been set to not hidden
+Cancel
+Current folder:
+Back
+Modify
+State
+None
+Favorite
+Hidden
+Advanced
+Change the icon path
+Change the application path
+Modifications saved
+Image modification failed: the image format is unknown
+Do you also want to modify the icon of this app ?
+Delete the associated icon
+Current folder:
+Create a folder
+Enter the name of the new folder
+You can't name a folder ".", please enter a new name.
+Should the apps in the folder be moved to the home page ?
+(if no is selected, the apps will be deleted)
+ADD:
+New application
+Validate
+Application type
+Game
+Bonus
+Application path
+Select path
+Cannot add game: the given path does not exists
+Application name
+Please chose another name, the given name is already in use
+The icon couldn't be retrieved, adding game without icon
+The given path is not a file
+Application saved
+The entered name contains forbidden characters (\ / : * ? " < > |)
+Please enter a name for the application
+Single app
+Config / Folder
+Auto detect
+Select the apps to add to the configuration / folder:
+Configuration / folder name:
+Please enter a name for the configuration / folder
+Please select at least one app
+Configuration saved
+Add a folder containing games
+Select the games to add to the launcher
+: this name is already in use. Do you want to rename the new app ?
+Enter a name for the new app:
+No game were detected in the selected folder
+Selected games have been added to the launcher
+Do you want to add the selected games into a folder ?
+Enter a name for the folder containing the selected games:
+UPDATES:
+Updates
+Refresh
+Refreshing...
+Available updates refreshed
+Update
+Cannot update :
+Connexion error: check your internet connexion
+Launcher :
+The launcher is up-to-date
+Update available for the launcher
+The launcher has to close to update. Do you want to continue ?
+Updater cannot be found, cancelling update
+Update message
+The launcher cannot close, an update is in progress.
+Currently updating
+An error has occurred during the update
+OPTIONS:
+Options
+Save
+Default parameters
+Do you really want to apply default parameters ?
+Parameters saved
+About the launcher
+Launcher version:
+Created and developed by
+Language file created by fastattack
+Icons by flaticon (see on github)
+GitHub repository link:
+Language
+Theme (Dark/Light)
+Window size
+Incorrect window size
+Window size is too small: minimum=
+Default filter
+Stop launcher when launching game
+Uninstall
+Are you sure you want to start the launcher uninstaller ?
+Uninstaller not found: uninstallation impossible
+Open launcher files
+Logs
+Show logs
+Logs are empty
+Published under the GNU version 3 or later license
+Experimental updates
+Experimental updates can contain lots of bugs. Do you still want to activate experimental updates ?
+DIALOGS:
+Entering value
+Please enter a value
+Please enter an integer
+Please enter a decimal number
+Cannot cancel, please enter a value
+Creating directory
+Enter the name of the directory to create
+The directory will be created in:
+The given name already exists, please enter another one
+Ok
+Cancel
+Entering path
+Please select a path
+Cannot cancel, please select a path
+Yes
+No

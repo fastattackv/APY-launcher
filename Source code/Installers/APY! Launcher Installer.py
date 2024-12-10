@@ -1,4 +1,15 @@
-""" This file contains the app to install the launcher """
+"""
+This file contains the app to install the launcher
+
+Copyright (C) 2024  fastattack
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+See the license at <https://www.gnu.org/licenses/>.
+"""
 
 import customtkinter as ctk
 import os
@@ -13,7 +24,7 @@ from custom_ctk_toplevels import get_resource_path, FileExplorer, showwarning, a
 from APY_launcher_updates import check_versions
 
 
-_version = "1.0.0"
+_version = "1.0.1"
 
 
 def on_closing():
@@ -255,13 +266,23 @@ class Step5:
         # download
         self.reload_variable.set(2)
         try:
-            response = requests.get("https://github.com/fastattackv/APY-launcher/raw/main/Downloads/APY!%20Launcher.zip")
-            with open(os.path.join(path, "APY! Launcher.zip"), "wb") as f:
-                f.write(response.content)
-            for language in languages:
-                response = requests.get(f"https://github.com/fastattackv/APY-launcher/raw/main/Downloads/{language}.lng")
-                with open(os.path.join(path, f"{language}.lng"), "wb") as f:
+            response = requests.get("https://github.com/fastattackv/APY-launcher/raw/main/Downloads/APY!%20Launcher.zip", timeout=(5, 10))
+            if response.status_code == 200:
+                with open(os.path.join(path, "APY! Launcher.zip"), "wb") as f:
                     f.write(response.content)
+            else:
+                self.reload_variable.set(5)
+                installing = False
+                return
+            for language in languages:
+                response = requests.get(f"https://github.com/fastattackv/APY-launcher/raw/main/Downloads/Languages/{language}.lng", timeout=(5, 10))
+                if response.status_code == 200:
+                    with open(os.path.join(path, f"{language}.lng"), "wb") as f:
+                        f.write(response.content)
+                else:
+                    self.reload_variable.set(5)
+                    installing = False
+                    return
         except requests.ConnectionError:
             self.reload_variable.set(5)
             installing = False
@@ -350,7 +371,7 @@ bold_font = ctk.CTkFont(size=13, weight="bold")
 installing = False
 
 # checking installer version
-versions = check_versions(["minversioninstaller", "launcher"])
+versions = check_versions(["minversioninstaller", "launcher"], "main")
 
 # starting the installer
 if versions == "connexion error":

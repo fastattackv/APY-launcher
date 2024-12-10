@@ -1,0 +1,10 @@
+createdir "url shortcuts"
+replacedir "_internal"
+replacefile "APY! Launcher Uninstaller.exe"
+replacefile "APY! Launcher.exe"
+update params.APYL newline end
+update params.APYL rewriteline index end ignoredmessages=
+update params.APYL newline end
+update params.APYL rewriteline index end branch=main
+updatecsv "apps.csv" all add 3
+updatecsv "apps.csv" all modify 3 .

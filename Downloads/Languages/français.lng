@@ -1,0 +1,167 @@
+WINDOW:
+Lanceur APY!
+Accueil
+Apps
+Nouveau
+Mises à jour
+Options
+HOME:
+Bienvenue dans le lanceur APY!
+Mises à jour
+Recherche de mises à jour...
+Le lanceur est à jour
+Une mise à jour du lanceur est disponible
+Lancer le dernier jeu lancé
+Pas de dernier jeu
+Messages
+Ne pas ré-afficher ces messages
+Notes de mises à jour
+APPS:
+Applications
+Pas de filtre
+Favoris
+Jeux
+Bonus
+Dossiers
+Rechercher
+Lancer
+Lancement impossible : le chemin de l'application n'existe pas
+Ajouter aux favoris
+a été ajouté aux favoris
+Retirer des favoris
+a été retiré des favoris
+Renommer
+Entrez le nouveau nom pour l'application
+Le nom entré est déjà utilisé, veuillez en choisir un autre
+renommé en
+Supprimer
+Voulez-vous vraiment supprimer l'application suivante du lanceur ?
+Choix aléatoire
+Le jeu sélectionné aléatoirement est
+Voulez-vous lancer ce jeu ?
+Déplacer
+Applications dans la configuration
+Configurations
+Applications cachées
+Cacher
+Montrer
+Une application ne peut pas être favorite et cachée en même temps,
+Voulez-vous tout de même effectuer le changement ?
+a été configuré comme caché
+a été configuré comme affiché
+Annuler
+Dossier actuel :
+Retour
+Modifier
+État
+Aucun
+Favori
+Caché
+Avancé
+Changer le chemin de l'icône
+Changer le chemin de l'application
+Modifications enregistrées
+Changement d'image impossible : format d'image inconnu
+Voulez-vous aussi modifier l'icône associée à cette application ?
+Supprimer l'icône associée
+Dossier actuel :
+Créer un nouveau dossier
+Entrez le nom du nouveau dossier
+Vous ne pouvez pas appeler un dossier ".", veuillez entrer un autre nom.
+Les applications dans le dossier doivent-elles être déplacées sur la page d'accueil ?
+(si non est sélectionné, les applications seront supprimées)
+ADD:
+Ajout d'application
+Valider
+Type d'application
+Jeu
+Bonus
+Chemin de l'application
+Sélection du chemin
+Ajout impossible : le chemin spécifié n'existe pas
+Nom de l'application
+Veuillez choisir un autre nom, le nom spécifié existe déjà
+L'icône n'a pas pu être récupérée, ajout du jeu sans icône
+Le chemin choisi n'est pas un fichier
+Application enregistrée
+Le nom entré contient des caractères interdits (\ / : * ? " < > |)
+Veuillez entrer un nom pour l'application
+App seule
+Configuration
+Détection auto.
+Sélectionnez les apps à ajouter à la configuration :
+Nom de la configuration :
+Veuillez entrer un nom pour la configuration
+Veuillez sélectionner au moins une application
+Configuration enregistrée
+Ajouter un dossier contenant des jeux
+Sélectionnez les jeux à ajouter
+ : une application possède déjà le même nom. Voulez vous renommer la nouvelle application ?
+Entrez le nouveau nom de l'application :
+Aucun jeu n'a été détecté dans le dossier sélectionné
+Jeux sélectionnés ajoutés au lanceur
+Voulez-vous ajouter les jeux sélectionnés dans un dossier ?
+Entrez le nom du dossier contenant les jeux sélectionnés:
+UPDATES:
+Mises à jour
+Rafraichir
+Rafraichissement...
+Mises à jour disponibles rafraichies
+Mettre à jour
+Mise à jour impossible :
+Erreur de connexion : vérifiez votre connexion
+Lanceur :
+Le lanceur est à jour
+Mise à jour du lanceur disponible
+Le lanceur doit se fermer pour continuer. Voulez-vous continuer ?
+Le programme de mise à jour est introuvable, annulation de la mise à jour
+Message de mise à jour
+Le lanceur ne peut pas se fermer, une mise à jour est en cours.
+Mise à jour en cours
+Une erreur a eu lieu pendant la mise à jour
+OPTIONS:
+Options
+Appliquer
+Paramètres par défaut
+Voulez-vous vraiment appliquer les paramètres par défaut ?
+Paramètres sauvegardés
+À propos
+Version du lanceur :
+Créé et développé par
+Fichier de langue créé par fastattack
+Icônes par flaticon (voir GitHub)
+Lien du dossier GitHub :
+Langue
+Thème (Sombre/Clair)
+Taille de la fenêtre
+Taille de la fenêtre incorrecte
+Taille de la fenêtre trop petite : minimum=
+Filtre par défaut
+Arrêt du lanceur au lancement d'un jeu
+Désinstaller
+Êtes-vous sûr de vouloir lancer le désinstallateur du lanceur ?
+Désinstallateur introuvable : désinstallation impossible
+Ouvrir les fichiers du lanceur
+Logs
+Afficher les logs
+Les logs sont vides
+Publié sous license GNU version 3 ou ultérieure
+Mises à jour expérimentales
+Les mises à jour expérimentales peuvent contenir beaucoup de bugs. Voulez-vous les activer tout de même ?
+DIALOGS:
+Entrée de valeur
+Veuillez entrer une valeur
+Veuillez entrer un nombre entier
+Veuillez entrer un nombre décimal (Le séparateur entre les parties entière et décimale est le ".")
+Annulation impossible, veuillez entrer une valeur
+Création de dossier
+Entrez le nom du dossier à créer
+Le dossier sera créé dans :
+Le nom entré existe déjà, veuillez en entrer un autre
+Ok
+Annuler
+Entrée du chemin
+Veuillez sélectionner un chemin
+Annulation impossible, veuillez sélectionner un chemin
+Oui
+Non
